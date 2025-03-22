@@ -1,0 +1,192 @@
+
+/*
+<!--Style CSS
+Selecteur : ID / CLASS
+ID (MOINS UTILISÉ)
+Exemple : 
+    p#categorie -> applique le style seulement aux éléments <p> qui ont cet id.
+    #categorie -> applique ce style à tous les éléments peut importe le type qui ont cet id.     
+
+class (plus utilisé)
+Peut séparer par une virgule
+Exemple : 
+    p.categorie
+    .categorie
+    p.categorie, h1, h2.categorie
+
+margin (espace extérieur) / padding (espace intérieur) : 
+Affectation : Haut droite bas gauche
+- Si on met seulement margin : 10px ca met 10px tout le tour
+- Si on met seulement margin : 10% ca met 10% tout le tour
+
+Display : permet de définir le type d'affichage de l'élément  
+Propriété : 
+block : accupe toute la ligne. 
+inline : Occupe que la place nécéssaire à l'élément. (ne prends que les marges )
+inline-block : Mode ligne qui permet les ajustements des marges. plus de contrôle. 
+
+-->
+
+  */              
+                
+/* Commentaire en CSS */ 
+
+/* 8 = directive qui s'adresse a tousl les opbject. 
+overflow = auto; permet d'ajuster le conteneur parent à la taille du contenu.
+Exemple : Dans le div si la table s'allonge au dela des dimension de la div, la div s'ajustera.
+Toujours mettre les styles generiques en haut et les exception plus bas. 
+Car l'ordre d'affectation se fait de haut en bas... donc so on a 2 directives qui affect la meme composante la dernière 
+sera appliquée.  
+*/
+* {
+    overflow:auto;
+}
+
+
+body {
+    background-color: #8BAADB;
+    font-family: Arial;
+}
+p.categorie {
+    background-color:black;                                    
+    color:white;                    
+    display:inline-block;                  
+    margin-left: 0px;                    
+    padding:8px 18px;
+    margin-bottom: 0;
+    margin-top: -18px;
+    font-weight: bold;
+    font-size:16px;
+}
+div.categorie  {
+    
+    margin-bottom: 0px;                
+    margin-top: 0px;
+    overflow: visible;
+}
+div.contenu{
+    background-color: white;
+    margin: 60px 10% 50px 10%;
+    padding: 0px 30px 30px 30px;
+    min-width: 350px;    
+    box-shadow: 0px 0px 8px 8px grey;
+    overflow: visible;
+
+}
+h1{
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    
+}
+p.description {                    
+    text-align: center;
+    max-width: 400px;
+    display:inline-block;    
+    font-size: 14px;              
+}
+
+.centre {                               
+    text-align: center;  
+    width: 100%;
+}
+
+div.separateur {
+    width: 100px;
+    height: 1PX;
+    background-color: black;
+    align-self:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.info{
+    position:relative;                    
+}
+
+table.info{
+    position:absolute; 
+    bottom:0;width:100%;            
+    color:white; 
+    background-color: #6C829DC0; height: 80px;                 
+}
+
+table.info td{
+    text-align: center; 
+    font-size: 14px;                   
+    border-style: none;
+    vertical-align: top;
+}
+
+table.info th{
+    text-align: center; 
+    font-size: 16px;                   
+    font-weight: bold;
+    border-style: none;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+}
+
+img.info{
+    display: block;
+    max-height: 400px;  
+    min-height: 200px;
+    object-fit: cover;
+    background-color: #8BAADB;
+}
+
+div.colonne{
+    width: 45%;    
+    margin-top: 20px;
+}
+
+div.colonne h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 10px solid #6C829D;
+    padding-bottom: 5px;
+}
+div.ingredients p {
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid lightgrey;
+    padding: 10px 0px;
+    margin: 5px;    
+    /*display: inline-block; interessant pour présentation optimisé pour l'espace.*/
+}
+
+table.preparation td{
+    vertical-align: top;
+}
+
+table.preparation p.numero {    
+    text-align: center;
+    font-size: 14px;
+    background-color: #6C829D;
+    color: white;
+    height: 25px;
+    width: 25px;
+    font-weight: bold;
+    padding-top: 4px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: 0;
+}
+
+table.preparation td.preparation_etape{
+    font-size: 14px;
+    padding-left: 10px ;
+    padding-bottom: 10px;    
+}
+
+table.preparation tr {
+    height: 40px;
+}
+
+div.colonne1{  
+    display :inline-block;        
+    margin-right: 10%; 
+} 
+div.colonne2{
+    float: right;    
+} 
